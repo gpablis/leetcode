@@ -26,13 +26,16 @@ roman = {
 # Testcase 2
 # s = "LVIII"
 
+# Testcase 3
+# s = "MCMXCIV"
+
 # Testcase 4
-s = "MCMXCIV"
+s ="D"
 
 def romanToInt(s: str) -> int:
     num = 0
     if s in roman:
-        print(roman[s])
+        num += roman[s]
     else:
         for i in range(0,len(s)):
             if i+1 < len(s) and roman[s[i]] < roman[s[i+1]]:
